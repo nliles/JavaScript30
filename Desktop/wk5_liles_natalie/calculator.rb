@@ -32,4 +32,6 @@ until answer == "quit"
     puts "Would you like to perform another calculation? (Answer yes or type 'quit')"
     answer = gets.chomp 
 end
+calculations = array.count
+puts "#{calculations} calculations performed."
 puts array
