@@ -8,7 +8,7 @@ elsif operator == '*'
 elsif operator == '/'
     return num1 / num2
 else 
-	puts "invalid entry"
+	return "invalid entry"
 end
 end
 
