@@ -1,0 +1,31 @@
+
+<br><br><br>
+<div class="row">
+
+	<h3>
+      <img src="<%= @article.image %>" />
+    </h3>
+
+    <h1 class="sec01"><%= @article.title %></h1>
+    <h5><%= link_to 'Edit', edit_article_path(@article), class: 'style-link' %>&nbsp;
+    <%= link_to 'Delete', article_path(@article),
+                    method: :delete,
+                    data: { confirm: 'Are you sure?' }, class: 'style-link' %></h5><br>
+	<p>
+	  <%= @article.text %>
+	</p>
+
+<br><br>
+<h4>COMMENTS<a id="display-comment-form" style="float:right; color:#8f8f8f" href="#">LEAVE A COMMENT</a></h4>
+<br>
+<%= render @article.comments %>
+
+<br><br>
+<h4></h4>
+
+<div id="comment-form">
+<%= render 'comments/form' %>
+</div>
+<br><br><br>
+</div>
+

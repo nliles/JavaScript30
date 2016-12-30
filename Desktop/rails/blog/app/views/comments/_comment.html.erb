@@ -1,0 +1,8 @@
+
+
+<h5><strong><%= comment.commenter %></strong> - <%= comment.body %></h5></span>
+
+  <h5><%= link_to 'Delete', [comment.article, comment],
+               method: :delete,
+               data: { confirm: 'Are you sure?' }, class: 'style-link' %></h5>
+<br>

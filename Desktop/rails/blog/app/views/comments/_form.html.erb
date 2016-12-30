@@ -1,0 +1,16 @@
+
+  <%= form_for([@article, @article.comments.build]) do |f| %>
+    <p>
+      <label>Name *</label><br>
+      <%= f.text_field :commenter, class: 'form-control' %>
+    </p>
+    <p>
+      <label>Comment *</label><br>
+      <%= f.text_area(:body, cols: 40, rows: 5) %>
+    </p>
+    <p>
+      <%= f.submit 'Post Comment', :class => 'button' %>
+    </p>
+  <% end %>
+
+
