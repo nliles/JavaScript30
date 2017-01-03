@@ -1,0 +1,39 @@
+<div class="hero-2">
+<h3>List a new item:</h3>
+<br>
+<%= form_for @item do |f| %>
+
+  <% if @item.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@item.errors.count, "error") %> prohibited
+        this article from being saved:
+      </h2>
+      <ul>
+        <% @item.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+	<p>
+	  <%= f.text_field :name, placeholder: "Name" %>
+	</p>
+	<p>
+	  <%= f.text_area :description, placeholder: "Description" %>
+	</p>
+	<p>
+	  <%= f.text_field :condition, placeholder: "Condition" %>
+	</p>
+	<p>
+	  <%= f.datetime_select :starts_at, :ampm => true, :minute_step => 15 %>
+	</p>
+	<p>
+	  <%= f.datetime_select :ends_at, :ampm => true, :minute_step => 15 %>
+	</p>
+	<p>
+	  <%= f.submit %>
+	</p>
+<% end %>
+</div>

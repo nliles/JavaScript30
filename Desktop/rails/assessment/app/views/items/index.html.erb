@@ -1,0 +1,14 @@
+
+<div class="hero">
+<div class="row">
+<h1 style="color:#696969;">The Auction</h1><br>
+       <% if @items %>
+	   <% @items.each do |item| %>
+	      <ul>
+	        <li><h3><%= link_to "#{item.name.upcase}", item_path(item), class: 'style-link-2' %></h3></li>
+	        <br>
+	      </ul>
+	   <% end %>
+	  <% end %>
+</div>
+</div>

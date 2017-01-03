@@ -1,0 +1,46 @@
+<div class="hero-2">
+<ul>
+	<li>Name: <%= @item.name %></li><br>
+	<li>Description: <%= @item.description %></li><br>
+	<li>Condition: <%= @item.condition %></li><br>
+	<li>Starts at: <%= @item.starts_at.strftime('%b. %d %Y') %> at <%= @item.starts_at.strftime("%I:%M%p") %></li><br>
+	<li>Ends at: <%= @item.ends_at.strftime('%b. %d %Y') %> at <%= @item.ends_at.strftime("%I:%M%p") %></li><br>
+	<li>Number of bidders: <%=@item.bidders.count %></li><br>
+	<% if logged_in? && !authorized?(@item.user) && !@item.bidder?(current_user) %>
+	<li>Place a bid: <br><br><%= form_for([@item, @item.bids.build]) do |f| %>
+	<% if flash[:notice] %>
+      <p style="color: #2E0854;"><%= flash[:notice] %></p>
+    <% end %>
+		<p>
+		  <%= f.text_field :amount, placeholder: "Amount" %>
+		  <%= f.hidden_field :user_id, :value => current_user.id %>
+		</p>
+		<p>
+		  <%= f.submit 'Place Bid' %>
+		</p>
+	<% end %></li>
+
+</ul>
+<% end %>
+<% if @item.bidder?(current_user) %>
+	<li>You bid <%= find_bid_amount(current_user, @item) %> dollars on <%= find_bid_date(current_user, @item) %> at <%= find_bid_time(current_user, @item)%></li>
+	    <h5><%= link_to 'Delete', [@bid.item, @bid],
+	               method: :delete,
+	               data: { confirm: 'Are you sure?' }, class: 'style-link' %></h5><br>
+	    <li><%= form_for([@bid.item, @bid]) do |f| %>
+	     <% if flash[:notice] %>
+           <p style="color: #2E0854;"><%= flash[:notice] %></p>
+         <% end %>
+
+		<p>
+		  <%= f.text_field :amount, placeholder: find_bid_amount(current_user, @item) %>
+		  <%= f.hidden_field :user_id, :value => current_user.id %>
+		  <%= f.submit 'Edit' %>
+		</p>
+		<p>
+		</p>
+	<% end %></li>
+<% end %>
+</div>
+
+
