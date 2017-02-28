@@ -6,46 +6,32 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
-  <div class="keys">
-      <div data-key="65" data-note="4C" class="white-key">
-	    <kbd>A</kbd>
-      </div>
-      <div data-key="87" data-note="4C#" class="black-key" id="1">
-	    <kbd>W</kbd>
-      </div>
-      <div data-key="83" data-note="4D" class="white-key">
-	    <kbd>S</kbd>
-      </div>
-      <div data-key="69" data-note="4D#" class="black-key" id="2">
-	    <kbd>E</kbd>
-      </div>
-      <div data-key="68" data-note="4E" class="white-key">
-	    <kbd>D</kbd>
-      </div>
-      <div data-key="70" data-note="4F" class="white-key">
-	    <kbd>F</kbd>
-      </div>
-      <div data-key="84" data-note="4Fs" class="black-key" id="3">
-	    <kbd>T</kbd>
-      </div>
-      <div data-key="71" data-note="4G" class="white-key">
-	    <kbd>G</kbd>
-      </div>
-      <div data-key="89" data-note="4Gs" class="black-key" id="4">
-	    <kbd>Y</kbd>
-      </div>
-      <div data-key="72" data-note="4A" class="white-key">
-	    <kbd>H</kbd>
-      </div>
-       <div data-key="85" data-note="4As" class="black-key" id="5">
-	    <kbd></kbd>
-      </div>     
-      <div data-key="74" data-note="4B" class="white-key">
-	    <kbd>J</kbd>
-      </div>
-  </div>
-  </div>
+    <div class="container">
+
+        <div class="keys">
+            <div data-key="65" id="a" class="note white"></div>
+            <div data-key="87" id="w" class="note black"></div>
+            <div data-key="83" id="s" class="note white"></div>
+            <div data-key="69" id="e" class="note black"></div>
+            <div data-key="68" id="d" class="note white"></div>
+            <div data-key="70" id="f" class="note white"></div>
+            <div data-key="84" id="t" class="note black"></div>
+            <div data-key="71" id="g" class="note white"></div>
+            <div data-key="89" id="y" class="note black"></div>
+            <div data-key="72" id="h" class="note white"></div>
+            <div data-key="85" id="u" class="note black"></div>
+            <div data-key="74" id="j" class="note white"></div>
+            <div data-key="75" id="k" class="note white"></div>
+            <div id="o" class="note black"></div>
+            <div id="l" class="note white"></div>
+            <div id="p" class="note black"></div>
+            <div id="semiColon" class="note white"></div>
+            <div id="apostrophe" class="note white"></div>
+
+        </div>
+
+
+    </div>
 	  <audio data-key="65" src="sounds/4C.wav"></audio>
 	  <audio data-key="87" src="sounds/4Cs.wav"></audio>
 	  <audio data-key="83" src="sounds/4D.wav"></audio>
@@ -62,7 +48,7 @@
   <script>
     function removeTransition(e) {
       if (e.propertyName !== 'transform') return;
-      e.target.classList.remove('playing');
+      this.classList.remove('playing');
     }
 
   	function playSound(e) {
@@ -75,9 +61,10 @@
   		audio.play();
   	}
 
-  	window.addEventListener('keydown', playSound);
-  	const keys = document.querySelectorAll('.keys')
+    window.addEventListener('keydown', playSound);
+  	const keys = document.querySelectorAll('.note');
   	keys.forEach(key => key.addEventListener('transitionend', removeTransition));
+
   </script>
 </body>
 </html>
