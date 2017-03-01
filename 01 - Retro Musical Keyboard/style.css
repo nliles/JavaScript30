@@ -1,0 +1,76 @@
+* {
+    width: 700px;
+    height: 200px;
+    display: flex;
+}
+
+title {
+    display: none;
+}
+
+script {
+    display: none;
+}
+
+body {
+  background-image: url("80spattern.jpg")
+}
+
+.container {
+    margin-top: 60%;
+    margin-left: -380px;
+    height: 100%;
+    padding: 1%;
+    flex-flow: column;
+    display: flex;
+    flex: 4;
+    z-index: -1;
+    background-color: #FF3B78;
+    border: 45px solid #FF3B78;
+    border-radius: 25px;
+  }
+
+.keys {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex: 8;
+    justify-content: center;
+}
+
+
+.note {
+    flex: 2;
+    display: inline-flex;
+    align-items: center;
+    transition: all .07s ease;
+}
+
+.black {
+    justify-content: center;
+    position: relative;
+    height: 70%;
+    background-color: #474747;
+    font-family: 'VT323', monospace;
+    font-size: 23px;
+    color: #5C85F9;
+    margin: 0 -3%                                                                                                                        
+}
+
+.white {
+    flex-flow: column;
+    justify-content: flex-end;
+    outline: 2px solid #474747;
+    font-family: 'VT323', monospace;
+    font-size: 23px;
+    color: #5C85F9;
+    background-color: #ffffff;
+    padding-bottom: 1%;
+    z-index: -1;
+}
+
+.playing {
+  transform: scale(1);
+  border-color: #ededed;
+  box-shadow: 0 0 1rem black;
+}
