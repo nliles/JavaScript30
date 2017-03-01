@@ -4,47 +4,65 @@
     <meta charset="UTF-8">
 	<title>Musical Keyboard</title>
 	<link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
 </head>
 <body>
     <div class="container">
 
         <div class="keys">
-            <div data-key="65" id="a" class="note white"></div>
-            <div data-key="87" id="w" class="note black"></div>
-            <div data-key="83" id="s" class="note white"></div>
-            <div data-key="69" id="e" class="note black"></div>
-            <div data-key="68" id="d" class="note white"></div>
-            <div data-key="70" id="f" class="note white"></div>
-            <div data-key="84" id="t" class="note black"></div>
-            <div data-key="71" id="g" class="note white"></div>
-            <div data-key="89" id="y" class="note black"></div>
-            <div data-key="72" id="h" class="note white"></div>
-            <div data-key="85" id="u" class="note black"></div>
-            <div data-key="74" id="j" class="note white"></div>
-            <div data-key="75" id="k" class="note white"></div>
-            <div id="o" class="note black"></div>
-            <div id="l" class="note white"></div>
-            <div id="p" class="note black"></div>
-            <div id="semiColon" class="note white"></div>
-            <div id="apostrophe" class="note white"></div>
-
+            <div data-key="65" id="a" class="note white">A</div>
+            <div data-key="87" id="w" class="note black">W</div>
+            <div data-key="83" id="s" class="note white">S</div>
+            <div data-key="69" id="e" class="note black">E</div>
+            <div data-key="68" id="d" class="note white">D</div>
+            <div data-key="70" id="f" class="note white">F</div>
+            <div data-key="84" id="t" class="note black">T</div>
+            <div data-key="71" id="g" class="note white">G</div>
+            <div data-key="89" id="y" class="note black">Y</div>
+            <div data-key="72" id="h" class="note white">H</div>
+            <div data-key="85" id="u" class="note black">U</div>
+            <div data-key="74" id="j" class="note white">J</div>
+            <div data-key="75" id="k" class="note white">K</div>
+            <div data-key="79" id="o" class="note black">O</div>
+            <div data-key="76" id="l" class="note white">L</div>
+            <div data-key="80" id="p" class="note black">P</div>
+            <div data-key="186" id="semiColon" class="note white">;</div>
+            <div data-key="222" id="apostrophe" class="note white">'</div>
+            <div data-key="90" id="z" class="note black">Z</div>
+            <div data-key="88" id="x" class="note white">X</div>
+            <div data-key="67" id="c" class="note black">C</div>
+            <div data-key="86" id="v" class="note white">V</div>
+            <div data-key="66" id="b" class="note black">B</div>
+            <div data-key="78" id="n" class="note white">N</div>
+            <div data-key="77" id="m" class="note white">M</div>
         </div>
 
-
     </div>
-	  <audio data-key="65" src="sounds/4C.wav"></audio>
-	  <audio data-key="87" src="sounds/4Cs.wav"></audio>
-	  <audio data-key="83" src="sounds/4D.wav"></audio>
-	  <audio data-key="69" src="sounds/4Ds.wav"></audio>
-	  <audio data-key="68" src="sounds/4E.wav"></audio>
-	  <audio data-key="70" src="sounds/4F.wav"></audio>
-	  <audio data-key="84" src="sounds/4Fs.wav"></audio>
-	  <audio data-key="71" src="sounds/4G.wav"></audio>
-	  <audio data-key="89" src="sounds/4Gs.wav"></audio>
-	  <audio data-key="72" src="sounds/A4.wav"></audio>
-	  <audio data-key="85" src="sounds/A4s.wav"></audio>
-	  <audio data-key="74" src="sounds/B4.wav"></audio>
-	  <audio data-key="75" src="sounds/5C.wav"></audio>
+          	  <audio data-key="65" src="sounds/4C.wav"></audio>
+          	  <audio data-key="87" src="sounds/4Cs.wav"></audio>
+          	  <audio data-key="83" src="sounds/4D.wav"></audio>
+          	  <audio data-key="69" src="sounds/4Ds.wav"></audio>
+          	  <audio data-key="68" src="sounds/4E.wav"></audio>
+          	  <audio data-key="70" src="sounds/4F.wav"></audio>
+          	  <audio data-key="84" src="sounds/4Fs.wav"></audio>
+          	  <audio data-key="71" src="sounds/4G.wav"></audio>
+          	  <audio data-key="89" src="sounds/4Gs.wav"></audio>
+          	  <audio data-key="72" src="sounds/A4.wav"></audio>
+          	  <audio data-key="85" src="sounds/A4s.wav"></audio>
+          	  <audio data-key="74" src="sounds/B4.wav"></audio>
+          	  <audio data-key="75" src="sounds/5C.wav"></audio>
+              <audio data-key="79" src="sounds/5Cs.wav"></audio>
+              <audio data-key="76" src="sounds/5D.wav"></audio>
+              <audio data-key="80" src="sounds/5Ds.wav"></audio>
+              <audio data-key="186" src="sounds/5E.wav"></audio>
+              <audio data-key="222" src="sounds/5F.wav"></audio>
+              <audio data-key="90" src="sounds/5Fs.wav"></audio>
+              <audio data-key="88" src="sounds/5G.wav"></audio>
+              <audio data-key="67" src="sounds/5Gs.wav"></audio>
+              <audio data-key="86" src="sounds/5A.wav"></audio>
+              <audio data-key="66" src="sounds/5As.wav"></audio>    
+              <audio data-key="78" src="sounds/5B.wav"></audio>  
+              <audio data-key="77" src="sounds/6C.wav"></audio>  
   <script>
     function removeTransition(e) {
       if (e.propertyName !== 'transform') return;
