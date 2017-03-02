@@ -25,7 +25,7 @@
     .clock {
       width: 20rem;
       height: 20rem;
-      border:15px solid #F3E9D2;
+      border:15px solid #E7E5DF;
       border-radius:50%;
       margin:50px auto;
       position: relative;
@@ -38,7 +38,7 @@
     .face {
       width: 100%;
       height: 100%;
-      transform: translateY(-3px); /* account for the height of the clock hands */
+      transform: translateY(-3px); 
     }
 
     .hand {
@@ -53,7 +53,7 @@
 
     .hour {
       width:50%;
-      height:6px;
+      height:4px;
     }
 
     .minute {
