@@ -40,18 +40,19 @@
 </div>
 <script>
 
+function getTime(offset) {
+  const time = new Date();
+  const utc = (time.getTimezoneOffset() * 60000) + time.getTime();
+  const city = utc + (3600000 * offset);
+  return new Date(city);
+}
 
 function setDate(name, offset) {
   const secondHand = document.querySelector('.second' + '.' + name);
   const minuteHand = document.querySelector('.minute' + '.' + name);
   const hourHand = document.querySelector('.hour' + '.' + name);
 
-  const n = new Date();
-  const local = n.getTime();
-  const localOffset = n.getTimezoneOffset() * 60000;
-  const utc = localOffset + local 
-  const city = utc + (3600000 * offset);
-  const now = new Date(city)
+  const now = getTime(offset);
 
   const seconds = now.getSeconds();
   const secondsDegrees = ((seconds/60) * 360) + 90;
