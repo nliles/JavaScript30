@@ -19,22 +19,23 @@
     .city {
       margin: 60px auto;
       color: white;
-      background-color: #292929;
+      background-color: #0A122A;
     }
 
     .clock {
       width: 20rem;
       height: 20rem;
-      border:15px solid #FF7F50;
+      border:15px solid #F3E9D2;
       border-radius:50%;
       margin:50px auto;
       position: relative;
       padding:2rem;
-      background-color: #FAEBD7;
+      background-image: url("http://orig05.deviantart.net/f1fa/f/2010/179/4/5/clock_face_2_by_agf81.jpg");
+      background-size: 300px;
+      background-position: center;
     }
 
     .face {
-      position: relative;
       width: 100%;
       height: 100%;
       transform: translateY(-3px); /* account for the height of the clock hands */
