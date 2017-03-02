@@ -7,44 +7,51 @@
 <body>
 <div class="clock">
 	<div class="face">
-		<div class="hand hour"></div>
-		<div class="hand minute"></div>
-		<div class="hand second"></div>
+		<div class="hand hour one"></div>
+		<div class="hand minute one"></div>
+		<div class="hand second one"></div>
 	</div>
 	<div class = "city">NEW YORK</div>
 </div>
 
 <div class="clock">
 	<div class="face">
-		<div class="hand hour"></div>
-		<div class="hand minute"></div>
-		<div class="hand second"></div>
+		<div class="hand hour two"></div>
+		<div class="hand minute two"></div>
+		<div class="hand second two"></div>
 	</div>
 	<div class="city">LOS ANGELES</div>
 </div>
 <div class="clock">
 	<div class="face">
-		<div class="hand hour"></div>
-		<div class="hand minute"></div>
-		<div class="hand second"></div>
+		<div class="hand hour three"></div>
+		<div class="hand minute three"></div>
+		<div class="hand second three"></div>
 	</div>
 	<div class="city">NEW DELHI</div>
 </div>
 <div class="clock">
 	<div class="face">
-		<div class="hand hour"></div>
-		<div class="hand minute"></div>
-		<div class="hand second"></div>
+		<div class="hand hour four"></div>
+		<div class="hand minute four"></div>
+		<div class="hand second four"></div>
 	</div>
 	<div class="city">BEIJING</div>
 </div>
 <script>
-  const secondHand = document.querySelector('.second');
-  const minuteHand = document.querySelector('.minute');
-  const hourHand = document.querySelector('.hour');
 
-function setDate() {
-  const now = new Date();
+
+function setDate(name, offset) {
+  const secondHand = document.querySelector('.second' + '.' + name);
+  const minuteHand = document.querySelector('.minute' + '.' + name);
+  const hourHand = document.querySelector('.hour' + '.' + name);
+
+  const n = new Date();
+  const local = n.getTime();
+  const localOffset = n.getTimezoneOffset() * 60000;
+  const utc = localOffset + local 
+  const city = utc + (3600000 * offset);
+  const now = new Date(city)
 
   const seconds = now.getSeconds();
   const secondsDegrees = ((seconds/60) * 360) + 90;
@@ -59,7 +66,10 @@ function setDate() {
   hourHand.style.transform = `rotate(${hourDegrees}deg)`;
 }
 
-setInterval(setDate, 1000);
+setInterval( function() { setDate("one", -5); }, 1000 );
+setInterval( function() { setDate("two", -8); }, 1000 );
+setInterval( function() { setDate("three", 5.5); }, 1000 );
+setInterval( function() { setDate("four", 8); }, 1000 );
 
 </script>
 </body>
