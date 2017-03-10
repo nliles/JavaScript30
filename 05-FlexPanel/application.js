@@ -4,9 +4,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function toggleOpen(event) {
       this.classList.toggle('open');
-      const texts = document.querySelectorAll(".outside");  
-      texts.forEach(text => text.style.visibility = text.style.visibility === 'hidden' ? '' : 'hidden');  
-      // text.style.visibility = text.style.visibility === 'hidden' ? '' : 'hidden';
     }
 
   function toggleActive(e) {
