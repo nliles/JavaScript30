@@ -28,14 +28,12 @@ function displayMatches() {
 	const html = matchArray.map(place => {
 	const regex = new RegExp(this.value, 'gi')
 	const officialName = place.name.official.replace(regex, `<span class="hl">${this.value}</span>`)
-	const commonName = place.name.common.replace(regex, `<span class="hl">${this.value}</span>`)
 	const languages = listHash(place.languages)
     return `
       <li>
-          <span class="name">Official: ${officialName}</span><br>
-          <span class="name">Common: ${commonName}</span>
-          <span class="name">Region: ${place.region}</span>
-          <span class="name">Languages: ${languages}</span>
+          <span>Official: ${officialName}</span>
+          <span>Region: ${place.region}</span>
+          <span>Languages: ${languages}</span>
       </li>
     `;
 	}).join('');

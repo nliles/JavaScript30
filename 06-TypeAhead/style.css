@@ -1,7 +1,9 @@
+  @import url(https://fonts.googleapis.com/css?family=Dosis);
+
     html {
       box-sizing: border-box;
-      background: #DCDCDC;
-      font-family:'helvetica neue';
+      background: #F0F0F0;
+      font-family: 'Dosis', sans-serif;
       font-size: 20px;
       font-weight: 200;
     }
@@ -18,6 +20,7 @@
     .search-form {
       max-width:400px;
       margin:50px auto;
+      margin-top: 100px;
     }
 
     input.search {
@@ -32,7 +35,8 @@
       z-index: 2;
       border-radius: 5px;
       font-size: 40px;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
+      border: solid 2px black;
+      border-radius: 0;
     }
 
 
@@ -87,3 +91,11 @@
       background:rgba(0,0,0,0.1);
       text-decoration: none;
     }
+
+    footer {
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    height: 100px;
+    z-index: -1;
+}
