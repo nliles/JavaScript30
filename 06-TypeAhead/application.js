@@ -11,14 +11,14 @@ fetch(endpoint)
 function findMatches(wordToMatch, countries) {
 	return countries.filter(place => {
 	   const regex = new RegExp(wordToMatch, 'gi');	
-	   return place.name.official.match(regex) || place.name.common.match(regex)	
+	   return place.name.common.match(regex)	
 	});
 }
 
 function listHash(hash) {
   var l = [];
   for(var index in hash) {
-    l.push(hash[index]);
+    l.push('  ' + hash[index]);
   }
   return l;
 }
@@ -27,13 +27,13 @@ function displayMatches() {
 	const matchArray = findMatches(this.value, countries);
 	const html = matchArray.map(place => {
 	const regex = new RegExp(this.value, 'gi')
-	const officialName = place.name.official.replace(regex, `<span class="hl">${this.value}</span>`)
+	const commonName = place.name.common.replace(regex, `<span class="hl">${this.value}</span>`)
 	const languages = listHash(place.languages)
     return `
       <li>
-          <span>Name: ${officialName}</span>
-          <span>Region: ${place.region}</span>
-          <span>Languages: ${languages}</span>
+          <span>Name: ${commonName}</span>&nbsp
+          <span>Region: ${place.region}</span>&nbsp
+          <span>Languages: ${languages}</span>&nbsp
       </li>
     `;
 	}).join('');
