@@ -31,7 +31,7 @@ function displayMatches() {
 	const languages = listHash(place.languages)
     return `
       <li>
-          <span>Official: ${officialName}</span>
+          <span>Name: ${officialName}</span>
           <span>Region: ${place.region}</span>
           <span>Languages: ${languages}</span>
       </li>
