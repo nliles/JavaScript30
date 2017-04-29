@@ -33,7 +33,7 @@ function displayTime(seconds) {
 	const remainderSeconds = seconds % 60;
 	if(remainderSeconds <= 10) {
        timeLeft.style.color = "#d03e19";
-            timeLeft.style.webkitTransitionDuration = "0.7s";
+            timeLeft.style.webkitTransitionDuration = "1.2s";
             timeLeft.style.opacity = 0;
             setTimeout(function () {
                 timeLeft.style.webkitTransitionDuration = "0.1s";
