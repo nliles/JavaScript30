@@ -13,5 +13,5 @@ const inputs = [].slice.call(document.querySelectorAll('.controls input'));
 
 });
 
-}
+
 
