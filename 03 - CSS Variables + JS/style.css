@@ -1,0 +1,31 @@
+    :root {
+       --brightness: 100%;
+       --spacing: 0px;
+       --base: #708090;
+    }
+
+    body {
+      text-align: center;
+    }
+
+    body {
+      background-color: #DCDCDC;
+      color: black;
+      font-family: 'helvetica neue', sans-serif;
+      font-weight: 100;
+      font-size: 25px;
+    }
+  
+    img {
+      filter: brightness(var(--brightness));
+      padding: var(--spacing);
+      background: var(--base);
+      margin: 0 auto;
+      margin-top: 4%;
+      width: 800px;
+      height: 500px;
+    }
+
+    .controls {
+      margin-top: 50px;
+    }

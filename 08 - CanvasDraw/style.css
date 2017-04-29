@@ -1,0 +1,33 @@
+  html, body {
+  	padding: 50px;
+/*  	background: url("retro.jpg") no-repeat;*/
+    background-size: 100% 100%;
+  }
+
+  .controls {
+  	padding: 50px;
+  }
+
+  .container {
+  	display:inline-block;
+  	position: relative;
+  	margin: 0 auto; 
+    position:relative; 
+  }
+
+ .img{
+ 	position:absolute;
+ 	z-index:-1;
+ 	margin-top: 0;
+    transform: rotate(90deg);
+ }
+
+  #draw {
+    border: 50px solid #FF69B4;
+    border-radius: 50px;
+    margin-top: -60px;
+    margin-left: 50px;
+    position:relative;
+    z-index:20;
+    background-color: white;
+} 
