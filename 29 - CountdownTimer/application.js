@@ -27,11 +27,12 @@ function timer(seconds) {
 }
 
 function displayTime(seconds) {
+	timeLeft.style.color = "#696969"
 	const hours = Math.floor(seconds / 3600);
 	const remainderMinutes = seconds % 3600;
 	const minutes = Math.floor(remainderMinutes/60);
 	const remainderSeconds = seconds % 60;
-	if(remainderSeconds <= 10) {
+	if(remainderSeconds < 11) {
        timeLeft.style.color = "#d03e19";
             timeLeft.style.webkitTransitionDuration = "1.2s";
             timeLeft.style.opacity = 0;
