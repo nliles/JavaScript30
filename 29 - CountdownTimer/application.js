@@ -27,18 +27,18 @@ function timer(seconds) {
 }
 
 function displayTime(seconds) {
-	timeLeft.style.color = "#696969"
+	timeLeft.style.opacity = 1;
 	const hours = Math.floor(seconds / 3600);
-	const remainderMinutes = seconds % 3600;
-	const minutes = Math.floor(remainderMinutes/60);
+	const minutes = Math.floor((seconds % 3600)/60);
 	const remainderSeconds = seconds % 60;
-	if(remainderSeconds < 11) {
+	remainderSeconds == 0 ? timeLeft.style.color = "#d03e19" : timeLeft.style.color = "#696969"
+	if(remainderSeconds < 11 && remainderSeconds > 0) {
        timeLeft.style.color = "#d03e19";
-            timeLeft.style.webkitTransitionDuration = "1.2s";
-            timeLeft.style.opacity = 0;
+            timeLeft.style.webkitTransitionDuration = "0.7s";
+            timeLeft.style.opacity = 1;
             setTimeout(function () {
                 timeLeft.style.webkitTransitionDuration = "0.1s";
-                timeLeft.style.opacity = 1;
+                timeLeft.style.opacity = 0;
             }, 700);
 	} 
 	timeLeft.textContent = `${hours ? hours + ':' : ''}${minutes < 10 ? 0 : ''}${minutes}:${remainderSeconds < 10 ? 0 : ''}${remainderSeconds}`;
