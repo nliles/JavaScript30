@@ -1,5 +1,3 @@
-document.addEventListener("DOMContentLoaded", function() {
-
 const inputs = [].slice.call(document.querySelectorAll('.controls input'));
 
 
@@ -11,7 +9,6 @@ const inputs = [].slice.call(document.querySelectorAll('.controls input'));
     inputs.forEach(input => input.addEventListener('change', handleUpdate));
     inputs.forEach(input => input.addEventListener('mousemove', handleUpdate));
 
-});
 
 
 

@@ -1,5 +1,3 @@
-document.addEventListener("DOMContentLoaded", function() {
-
   const nav = document.querySelector('#main');
   const TopofNav = nav.offsetTop;
 
@@ -15,4 +13,3 @@ document.addEventListener("DOMContentLoaded", function() {
 
   window.addEventListener('scroll', fixNav);
 
-});
