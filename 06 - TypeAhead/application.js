@@ -1,5 +1,3 @@
-document.addEventListener("DOMContentLoaded", function() {
-
 const endpoint = 'https://raw.githubusercontent.com/mledoze/countries/master/countries.json';
 
 const countries = [];
@@ -47,4 +45,3 @@ searchInput.addEventListener('keyup', displayMatches);
 searchInput.addEventListener('change', displayMatches);
 
 
-});

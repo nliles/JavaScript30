@@ -1,4 +1,3 @@
-document.addEventListener("DOMContentLoaded", function() {
     function removeTransition(e) {
       if (e.propertyName !== 'transform') return;
       this.classList.remove('playing');
@@ -18,4 +17,3 @@ document.addEventListener("DOMContentLoaded", function() {
     const keys = document.querySelectorAll('.note');
     keys.forEach(key => key.addEventListener('transitionend', removeTransition));
 
-});

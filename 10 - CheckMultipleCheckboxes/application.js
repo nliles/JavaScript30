@@ -13,7 +13,6 @@ function handleClick(e) {
       }
     })
 
-
   }
 
   lastCheck = this;

@@ -1,5 +1,3 @@
-document.addEventListener("DOMContentLoaded", function() {
-
 const canvas = document.querySelector('#draw');
 const ctx = canvas.getContext('2d');
 
@@ -36,7 +34,6 @@ canvas.addEventListener('mouseup', () => isDrawing = false);
 canvas.addEventListener('mouseout', () => isDrawing = false);
 
 
-});
 
 
 
