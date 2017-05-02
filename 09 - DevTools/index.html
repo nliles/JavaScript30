@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Console Tricks!</title>
+</head>
+<body>
+
+  <p onClick="makeGreen()">×DEV×TOOLS×</p>
+
+  <script>
+    const dogs = [{ name: 'Snickers', age: 2 }, { name: 'hugo', age: 8 }];
+
+    function makeGreen() {
+      const p = document.querySelector('p');
+      p.style.color = '#BADA55';
+      p.style.fontSize = '50px';
+    }
+
+    // Regular
+    console.log("Hello");
+
+    // clearing
+    console.clear();
+    // Interpolated
+    console.log("Hello I am a %s", "🐒");
+
+    // Styled
+    console.log("%c I am a large font", "font-size:50px; background-color:gray; text-shadow: 10px 10px 0 cyan");
+
+    // warning!;
+    console.warn("OH NO!!");
+
+    // Error :|
+    console.error("yikes 😳");
+
+    // Info
+    console.info("Cherophobia is the fear of fun.");
+
+    // Testing
+    console.assert(1 === 1, "that's wrong!");
+    console.assert(1 === 2, "that's wrong!");
+
+
+    // Viewing DOM Elements
+    p = document.querySelector('p');
+    console.log(p);
+    console.dir(p);
+
+    // Grouping together
+    dogs.forEach(dog => {
+      console.groupCollapsed(`${dog.name}`);
+      console.log(`This is ${dog.name}`);
+      console.log(`${dog.name} is ${dog.age} years old.`);
+      console.groupEnd(`${dog.name}`);
+    })
+
+    // counting
+    console.count('cat');
+    console.count('cat');
+    console.count('cat');
+    console.count('cat');
+
+    // timing
+    console.time('fetching data');
+    fetch('https://raw.githubusercontent.com/mledoze/countries/master/countries.json')
+    .then(data => {
+      console.timeEnd('fetching data');
+      console.log(data);
+    });
+
+  </script>
+</body>
+</html>
