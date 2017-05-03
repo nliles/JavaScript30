@@ -15,8 +15,12 @@
       margin:20px;
     }
 
-    input[type=checkbox]:checked + span {
+    input[type=checkbox]:checked {
       text-decoration: line-through;
+    }
+
+    header {
+      align: center;
     }
 
     #bands {
