@@ -1,0 +1,43 @@
+    html {
+      font-family: sans-serif;
+      background: #ededed;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Josefin Sans', sans-serif;;
+      display: flex;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    input[type="checkbox"] {
+      margin:20px;
+    }
+
+    input[type=checkbox]:checked + span {
+      text-decoration: line-through;
+    }
+
+    #bands {
+      list-style-type: none;
+      font-size: 20px;
+      background: white;
+      width: 500px;
+      margin: auto;
+      padding: 0;
+      box-shadow: 0 0 0 20px rgba(0, 0, 0, 0.05);
+    }
+
+    #bands li {
+      border-bottom: 1px solid #efefef;
+      padding: 5px;
+    }
+    #bands li:last-child {
+      border-bottom: 0;
+    }
+
+    a {
+      color: #ffc600;
+      text-decoration: none;
+    }
