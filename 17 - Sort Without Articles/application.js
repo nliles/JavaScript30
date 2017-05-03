@@ -11,6 +11,27 @@ const sortedBands = bands.sort((a,b) => {
 
 document.querySelector('#bands').innerHTML = 
 	sortedBands.map(band => 
-	`<li><input type="checkbox"><span>${band}</span></input></li>`)
-	.join('')
+	`<li><input type="checkbox"><span class="labels">${band}</span></input></li>`)
+	.join('');
 
+const checkboxes = document.querySelectorAll('input[type=checkbox]');
+let lastCheck;
+
+function handleClick(e) {
+  let inBetween = false;
+  if (e.shiftKey && this.checked) {
+    checkboxes.forEach(checkbox => {
+      if (checkbox === this || checkbox === lastCheck) {
+        inBetween = !inBetween;
+      }
+      if (inBetween) {
+        checkbox.checked = true;
+      }
+    })
+
+  }
+
+  lastCheck = this;
+}
+
+checkboxes.forEach(checkbox => checkbox.addEventListener('click', handleClick));
