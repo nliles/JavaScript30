@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Key Detection</title>
+  <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+</head>
+<body>
+<h2>TYPE THE SECRET CODE</h2>
+  <style>
+    html {
+      font-size: 20px;
+      margin-top: 20px;
+      text-align: center;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+  </style>
+<script>
+
+var konamiKeys = {
+  37: 'left',
+  38: 'up',
+  39: 'right',
+  40: 'down',
+  65: 'a',
+  66: 'b'
+};
+
+
+var konamiCode = ['up', 'up', 'down', 'down', 'left', 'right', 'left', 'right', 'b', 'a'];
+
+var position = 0;
+
+window.addEventListener('keydown', function(e) {
+
+  var key = konamiKeys[e.keyCode];
+  console.log(key);
+
+  var requiredKey = konamiCode[position];
+
+
+  if (key == requiredKey) {
+
+    position++;
+
+    if (position == konamiCode.length)
+      rightGuess();
+  } else
+    position = 0;
+});
+
+
+
+
+function rightGuess() {
+  position = 0;
+  cornify_add();
+
+  alert("You guessed the secret code.");
+}
+
+</script>
+</body>
+</html>
