@@ -1,0 +1,68 @@
+
+body, #dialog {
+  font-family: 'Cormorant SC', serif;
+}
+
+h1, h2, p {
+  text-align: center;
+}
+
+p {
+  font-family: 'Pavanam', sans-serif;
+  font-size: 0.8em;
+  width: 75%;
+  padding-left: 60px;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-family: 'Cormorant SC', serif;
+  padding-left: 10px;
+  padding-right: 0;
+}
+
+.container {
+  font-size: 40px;
+}
+
+button {
+  font-family: 'Cormorant SC', serif;
+  background: #ffb6c1;
+  border: none;
+  width: 100px;
+  height:30px;
+  color: #fff;
+}
+
+#form {
+  padding-left: 80px;
+}
+
+input[type="text"] {
+  width: 50%;
+  height: 30px;
+  outline: none;
+  background: #f1f1f1;
+  border: none;
+}
+
+div.ui-widget-header {
+  border: none;
+  margin: 0;
+  background: #ffb6c1;
+  color: #fff;
+}
+
+.ui-dialog .ui-dialog-titlebar {
+  height: 20px;
+  border-radius: 0;
+  padding: 0;
+}
+
+div.ui-dialog .ui-dialog-titlebar-close {
+  background: none;
+  border: none;
+}
+
+
+
+
